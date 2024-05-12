@@ -1,0 +1,11 @@
+https://jsonplaceholder.typicode.com/todos/1
+
+// fetches user 1 and displays their email in a div
+
+let element = document.querySelector("#messageArea");
+fetch("http://jsonplaceholder.typicode.com/users/1")
+    .then(response => response.json())
+    .then(data => {
+        let message = "User email: " + data.email;
+        element.innerHTML = message 
+     });
